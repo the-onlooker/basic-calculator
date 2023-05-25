@@ -16,10 +16,9 @@ a {
 }
 
 body {
-    background-image: url('pexels-stephan-seeber-1261728.jpg');
+    background-image: url('pinksky.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-image: linear-gradient( to bottom right, rgba(79,51,176,1.0),rgba(210,53,165)); */
 }
 
 .container {
