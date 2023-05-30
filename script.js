@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
   var loadingOverlay = document.querySelector(".loading-overlay");
 
-  // Hide the loading overlay after 4 seconds
+  // Hide the loading overlay after 2.8 seconds
   setTimeout(function() {
       loadingOverlay.classList.add("hide");
       setTimeout(function() {
           loadingOverlay.style.display = "none";
       }, 500);
-  }, 4000);
+  }, 2800);
 });
 
 const display = document.getElementById('display');
