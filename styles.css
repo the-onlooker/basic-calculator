@@ -10,12 +10,56 @@ body {
     font-family: sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('darkbg.png'); /* Set the dark background image */
+    background-image: url('darkbg.png');
 }
 
 a {
     text-decoration: none;
     color: #fff;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('darkbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loading-overlay.hide {
+    opacity: 0;
+}
+
+.loading-pulse {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
 }
 
 .container {
@@ -38,7 +82,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
     transition: background-color 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.8); /* Set white background with 50% opacity */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .theme-toggler {
@@ -108,7 +152,7 @@ button#equal {
 }
 
 .calculator.light {
-    background-color: #ffffff; /* Override transparency in light mode */
+    background-color: #ffffff;
 }
 
 .calculator #display {
