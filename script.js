@@ -13,7 +13,7 @@ buttons.forEach((item) => {
       if (display.innerText !== "") {
         display.innerText = eval(display.innerText);
       } else {
-        display.innerText = "Empty!";
+        display.innerText = "";
         setTimeout(() => (display.innerText = ""), 2000);
       }
     } else {
@@ -31,3 +31,35 @@ themeToggleBtn.onclick = () => {
   themeToggleBtn.classList.toggle("active");
   isDark = !isDark;
 };
+
+// Keyboard events
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (key >= '0' && key <= '9') {
+    display.innerText += key;
+  } else if (key === 'c') {
+    display.innerText = '';
+  } else if (key === '/') {
+    display.innerText += '/';
+  } else if (key === '*' || key === 'x') {
+    display.innerText += '*';
+  } else if (key === '-' || key === '–') {
+    display.innerText += '-';
+  } else if (key === '+') {
+    display.innerText += '+';
+  } else if (key === '(') {
+    display.innerText += '(';
+  } else if (key === ')') {
+    display.innerText += ')';
+  } else if (key === 'Backspace' || key === 'Delete') {
+    let string = display.innerText.toString();
+    display.innerText = string.substr(0, string.length - 1);
+  } else if (key === 'Enter' || key === '=') {
+    if (display.innerText !== "") {
+      display.innerText = eval(display.innerText);
+    } else {
+      display.innerText = "";
+      setTimeout(() => (display.innerText = ""), 2000);
+    }
+  }
+});

@@ -16,10 +16,9 @@ a {
 }
 
 body {
-    background-image: url('darkbg.png');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-image: linear-gradient( to bottom right, rgba(79,51,176,1.0),rgba(210,53,165)); */
 }
 
 .container {
@@ -105,8 +104,6 @@ button#equal {
     height: 130px;
 }
 
-/* light theme */
-
 .calculator.light {
     background-color: rgba(255, 255, 255, 0.668);
 }
@@ -134,8 +131,6 @@ button#equal {
     background-color: #99ff99;
     color: #000000;
 }
-
-/* dark theme */
 
 .calculator.dark {
     background-color: #07111597;
