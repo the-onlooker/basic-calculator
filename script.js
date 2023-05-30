@@ -26,10 +26,20 @@ const themeToggleBtn = document.querySelector(".theme-toggler");
 const calculator = document.querySelector(".calculator");
 const toggleIcon = document.querySelector(".toggler-icon");
 let isDark = true;
+
 themeToggleBtn.onclick = () => {
   calculator.classList.toggle("dark");
   themeToggleBtn.classList.toggle("active");
   isDark = !isDark;
+
+  const container = document.querySelector(".container");
+  container.classList.toggle("dark");
+
+  if (isDark) {
+    document.body.style.backgroundImage = "url('darkbg.png')";
+  } else {
+    document.body.style.backgroundImage = "url('lightbg.png')";
+  }
 };
 
 // Keyboard events
